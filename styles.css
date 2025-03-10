@@ -9,6 +9,12 @@ body {
     flex-direction: column;
     align-items: center;
     overflow-x: hidden;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
 }
 
 .discord-container {
@@ -34,6 +40,7 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 .navbar ul {
@@ -43,10 +50,13 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
+    width: 100%;
+    max-width: 600px; /* Limit maximum width */
+    flex-wrap: wrap; /* Allow items to wrap on very small screens */
 }
 
 .navbar li {
-    margin: 0 15px;
+    margin: 0 10px; /* Reduce margin on smaller screens */
     display: flex;
     align-items: center;
 }
@@ -73,11 +83,12 @@ body {
 /* Special styling for Discord link in navbar */
 .navbar .discord-link {
     border-bottom: none;
-    padding: 5px 10px;
+    padding: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: transform 0.3s ease;
+    min-width: 24px; /* Ensure minimum width */
 }
 
 .navbar .discord-link:hover {
@@ -111,6 +122,7 @@ body {
     min-height: 100px;
     margin: 20px 0;
     position: relative;
+    box-sizing: border-box;
 }
 
 #typewriter {
@@ -165,6 +177,7 @@ body {
     width: 90%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease;
+    box-sizing: border-box;
 }
 
 .event-card:hover {
