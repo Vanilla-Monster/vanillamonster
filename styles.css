@@ -185,8 +185,9 @@ body {
 }
 
 .event-title {
-    font-size: 28px;
+    font-size: 5vmin;
     margin-bottom: 15px;
+    margin-top: 0px;
     color: #ff4d4d;
 }
 
@@ -202,7 +203,7 @@ body {
 }
 
 .event-description h3 {
-    font-size: 24px;
+    font-size: 4.5vmin;
     color: #ffcc00;
     margin: 25px 0 15px;
     text-align: center;
