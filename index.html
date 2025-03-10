@@ -1,101 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vanilla Monster</title>
-    <!-- Adding the Rubik Glitch Google Font -->
+    <!-- Preload the font file to prevent font flashing -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap" as="style">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background-color: black;
-            color: white;
-            font-family: monospace;
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-        }
-
-        .email {
-            font-family: monospace;
-            color: red;
-            font-size: 18px;
-            margin-bottom: 20px;
-            letter-spacing: 0.1em;
-            position: absolute;
-            top: 20px;
-        }
-        
-        .title {
-            font-family: 'Rubik Glitch', cursive;
-            font-size: 48px;
-            margin-bottom: 40px;
-            text-align: center;
-            color: #fff;
-        }
-        
-        .container {
-            text-align: center;
-            font-size: 24px;
-            padding: 0 20px;
-            max-width: 100%;
-            width: 100%;
-        }
-        
-        #typewriter {
-            border-right: 0.15em solid white;
-            white-space: normal;
-            margin: 0 auto;
-            letter-spacing: 0.15em;
-            animation: blink-caret 0.75s step-end infinite;
-            min-height: 1.2em;
-            display: inline-block;
-            word-wrap: break-word;
-            max-width: 90%;
-        }
-        
-        @keyframes blink-caret {
-            from, to { border-color: transparent }
-            50% { border-color: white; }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <div class="email">info@vanillamonster.com</div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="https://discord.gg/duZU2gZ2Pe" class="discord-link" target="_blank">
+                    <img src="vendor/Discord-Symbol-White.svg" alt="Discord" class="discord-logo"></a></li>
+        </ul>
+    </nav>
+
     <h1 class="title">Vanilla Monster</h1>
     <div class="container">
         <div id="typewriter"></div>
     </div>
 
-    <script>
-        const text = "Storytelling is the 🔑 to everything";
-        const typewriterElement = document.getElementById('typewriter');
-        let index = 0;
-        
-        function typeWriter() {
-            if (index < text.length) {
-                typewriterElement.textContent += text.charAt(index);
-                index++;
-                setTimeout(typeWriter, 75); // Speed of typing
-            } else {
-                // Text is fully typed, wait 2 seconds then reset
-                setTimeout(() => {
-                    typewriterElement.textContent = '';
-                    index = 0;
-                    typeWriter(); // Start over
-                }, 2000);
-            }
-        }
-        
-        // Start the typewriter effect when page loads
-        window.onload = typeWriter;
-    </script>
+    <footer>
+        <p>© 2025 Vanilla Monster Pty Limited. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
+
 </html>

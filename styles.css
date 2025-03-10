@@ -1,0 +1,286 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: monospace;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.discord-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.discord-logo {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+/* Navbar Styles */
+.navbar {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px 0;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.navbar a:hover {
+    color: #ff4d4d;
+    border-bottom: 2px solid #ff4d4d;
+}
+
+.navbar a.active {
+    color: #ff4d4d;
+    border-bottom: 2px solid #ff4d4d;
+}
+
+/* Special styling for Discord link in navbar */
+.navbar .discord-link {
+    border-bottom: none;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.navbar .discord-link:hover {
+    border-bottom: none;
+    color: white;
+    transform: scale(1.15);
+}
+
+.title {
+    font-family: 'Rubik Glitch', cursive;
+    font-size: 48px;
+    margin: 40px 0 20px;
+    text-align: center;
+    color: #fff;
+    /* Font loading transition */
+    opacity: 0;
+    transition: opacity 0.1s ease-in;
+}
+
+.fonts-loaded .title {
+    opacity: 1;
+}
+
+.container {
+    text-align: center;
+    font-size: 24px;
+    padding: 0 20px;
+    max-width: 800px;
+    width: 100%;
+    margin-bottom: 40px;
+    min-height: 100px;
+    margin: 20px 0;
+    position: relative;
+}
+
+#typewriter {
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 800px;
+    white-space: normal;
+    letter-spacing: 0.15em;
+    min-height: 1.2em;
+    display: inline-block;
+    word-wrap: break-word;
+    position: relative;
+    height: auto;
+    overflow: visible;
+    line-height: 1.5;
+    vertical-align: middle;
+}
+
+#typewriter::after {
+    content: '|';
+    display: inline;
+    color: white;
+    animation: blink-caret 0.75s step-end infinite;
+    vertical-align: middle;
+    margin-left: 2px;
+    position: relative;
+}
+
+/* Fix for emoji vertical alignment */
+#typewriter span, 
+#typewriter em,
+#typewriter strong,
+#typewriter i {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.5;
+}
+
+@keyframes blink-caret {
+    from, to { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+.event-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 30px;
+    margin: 20px 0;
+    max-width: 800px;
+    width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+}
+
+.event-title {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #ff4d4d;
+}
+
+.event-date {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #ffcc00;
+}
+
+.event-description {
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.event-description h3 {
+    font-size: 24px;
+    color: #ffcc00;
+    margin: 25px 0 15px;
+    text-align: center;
+}
+
+.event-price {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #00cc99;
+}
+
+.buy-button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: monospace;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.buy-button:hover {
+    background-color: #ff3333;
+}
+
+footer {
+    margin-top: auto;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.menu-section {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
+
+.menu-section h4 {
+    font-size: 20px;
+    color: #ff4d4d;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.menu-section ul {
+    list-style-type: none;
+    padding-left: 10px;
+}
+
+.menu-section li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 15px;
+}
+
+.menu-section li:before {
+    content: "•";
+    color: #00cc99;
+    position: absolute;
+    left: 0;
+}
+
+.venue-info {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-left: 3px solid #00cc99;
+    padding: 12px 15px;
+    margin: 20px 0;
+    text-align: center;
+    border-radius: 0 8px 8px 0;
+}
+
+.venue-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+    color: #ffcc00;
+}
+
+.venue-address {
+    font-size: 16px;
+    margin: 0;
+    color: #fff;
+} 
