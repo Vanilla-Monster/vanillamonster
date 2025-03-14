@@ -13,7 +13,9 @@ body {
     box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
 
@@ -40,7 +42,8 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
 }
 
 .navbar ul {
@@ -51,12 +54,15 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    max-width: 600px; /* Limit maximum width */
-    flex-wrap: wrap; /* Allow items to wrap on very small screens */
+    max-width: 600px;
+    /* Limit maximum width */
+    flex-wrap: wrap;
+    /* Allow items to wrap on very small screens */
 }
 
 .navbar li {
-    margin: 0 10px; /* Reduce margin on smaller screens */
+    margin: 0 10px;
+    /* Reduce margin on smaller screens */
     display: flex;
     align-items: center;
 }
@@ -88,7 +94,8 @@ body {
     align-items: center;
     justify-content: center;
     transition: transform 0.3s ease;
-    min-width: 24px; /* Ensure minimum width */
+    min-width: 24px;
+    /* Ensure minimum width */
 }
 
 .navbar .discord-link:hover {
@@ -154,7 +161,7 @@ body {
 }
 
 /* Fix for emoji vertical alignment */
-#typewriter span, 
+#typewriter span,
 #typewriter em,
 #typewriter strong,
 #typewriter i {
@@ -164,8 +171,15 @@ body {
 }
 
 @keyframes blink-caret {
-    from, to { opacity: 0; }
-    50% { opacity: 1; }
+
+    from,
+    to {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
 }
 
 .event-card {
@@ -327,4 +341,48 @@ footer {
     font-size: 16px;
     margin: 0;
     color: #fff;
+}
+
+.modal-content {
+    color: white;
+    background-color: #0d0d0d;
+    box-shadow: 2px 2px 2px 0px #f1f4e4;
+    border-radius: 5px;
+    width: 460px;
+}
+
+.modal-header {
+    display: flex;
+    padding: 1rem 1rem;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.modal-title {
+    margin-bottom: 0;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.modal-body {
+    position: relative;
+    flex: 1 1 auto;
+    padding: 1rem
+}
+
+.tg-btn-1 {
+    display: inline-flex;
+    color: white;
+    text-transform: uppercase;
+    padding: 14px 49px;
+    letter-spacing: 0.8px;
+}
+
+h6.modal-footer {
+    text-align: center;
+    font-weight: lighter;
+    margin-top: 0px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 12px;
 }
